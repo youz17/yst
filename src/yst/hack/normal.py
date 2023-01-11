@@ -1,4 +1,4 @@
-from forbiddenfruit import curse
+from yst.hack.forbiddenfruit import curse
 
 
 def size(self):
