@@ -1,1 +1,1 @@
-import normal
+import yst.hack.normal
