@@ -1,13 +1,9 @@
 def bind(f, *args, **kwargs):
-    def helper(a):
-        return f(*args, a, **kwargs)
-    return helper
+    return lambda a: f(*args, a, **kwargs)
 
 
 def rbind(f, *args, **kwargs):
-    def helper(a):
-        return f(a, *args, **kwargs)
-    return helper
+    return lambda a: f(a, *args, **kwargs)
 
 
 def fst(t):
@@ -16,3 +12,23 @@ def fst(t):
 
 def snd(t):
     return t[1]
+
+
+def cmap(f):
+    "curryed map"
+    return lambda l: map(f, l)
+
+
+def cfilter(f):
+    "curryed filter"
+    return lambda l: filter(f, l)
+
+
+def pipe(v, *args):
+    for f in args:
+        v = f(v)
+    return v
+
+
+def compose(*args):
+    return lambda v: pipe(v, *args)
