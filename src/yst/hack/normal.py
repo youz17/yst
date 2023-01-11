@@ -10,19 +10,19 @@ def empty(self):
 
 
 def _map(self, f):
-    map(f, self)
+    return map(f, self)
 
 
 def _filter(self, f):
-    filter(f, self)
+    return filter(f, self)
 
 
 def dict_filter(self, f: dict):
-    filter(f, self.items())
+    return filter(f, self.items())
 
 
 def dict_map(self: dict, f):
-    map(f, self.items())
+    return map(f, self.items())
 
 
 for t in [list, set]:
