@@ -15,7 +15,7 @@ description = "youz's script tools"
 name = "yst"
 readme = "README.md"
 requires-python = ">=3.7"
-version = "0.1.0"
+version = "0.1.1"
 
 [project.urls]
 "Bug Tracker" = "https://github.com/youz17/yst/issues"
