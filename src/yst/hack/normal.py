@@ -25,6 +25,22 @@ def dict_map(self: dict, f):
     return map(f, self.items())
 
 
+def to_list(self):
+    return list(self)
+
+
+def to_dict(self):
+    return dict(self)
+
+
+def to_set(self):
+    return set(self)
+
+
+for t in [map, filter, list, set, dict]:
+    for (n, f) in [('to_list', to_list), ('to_dict', to_dict), ('to_set', to_set)]:
+        curse(t, n, f)
+
 for t in [list, set]:
     curse(t, 'map', _map)
     curse(t, 'filter', _filter)
